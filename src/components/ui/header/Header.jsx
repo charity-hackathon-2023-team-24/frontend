@@ -15,7 +15,6 @@ const Header = () => {
     <header className={styles.header}>
       <a onClick={handleClick} href={routes.rootPage}>
         <h1 className={styles.headerTitle}>Shoot Children’s scares</h1>
-        {/* <img src={logo} alt='logo' width={230} height={60} /> */}
       </a>
     </header>
   );

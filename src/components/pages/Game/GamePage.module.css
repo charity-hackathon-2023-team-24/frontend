@@ -7,9 +7,9 @@
   color: var(--white);
 }
 
-.homeContent {
-  max-width: var(--container-width);
-  margin: auto;
-  padding: 2rem 1rem;
-  text-align: center;
+.gameContent {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  justify-content: stretch;
+  gap: 10px;
 }

@@ -1,0 +1,13 @@
+.board {
+  position: relative;
+  display: flex;
+}
+
+.board img {
+  position: absolute;
+  bottom: 0;
+  left: 30%;
+
+  max-width: 380px;
+  max-height: 480px;
+}

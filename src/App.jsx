@@ -6,7 +6,7 @@ import {
   createRoutesFromElements,
 } from 'react-router-dom';
 
-import GamePage from './components/pages/GamePage';
+import GamePage from './components/pages/Game/GamePage';
 import HomePage from './components/pages/Home/HomePage';
 import Layout from './components/pages/Layout';
 import routes from './routes';

@@ -1,0 +1,14 @@
+.countdown {
+  margin-top: 180px;
+  margin-left: 35%;
+  font-family: var(--font-primary);
+  font-size: 72px;
+  text-align: center;
+}
+
+.timer {
+  font-family: var(--font-secondary);
+  font-size: 150px;
+  line-height: 81.3%;
+  text-transform: uppercase;
+}
