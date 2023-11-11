@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import styles from './Rules.module.css';
 
-const Rules = () => {
+const Rules = ({ setModal }) => {
   return (
-    <div className={styles.rules}>
-      <a href=''>Как играть</a>
+    <div onClick={() => setModal(true)} className={styles.rules}>
+      <p>Как играть?</p>
     </div>
   );
 };

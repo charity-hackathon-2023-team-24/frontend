@@ -1,12 +1,12 @@
 .rules {
   display: flex;
+  justify-content: center;
   margin: auto;
   position: relative;
   width: 200px;
-  text-align: center;
 }
 
-.rules a {
+.rules p {
   font-family: var(--font-primary);
   font-weight: 400px;
   font-size: 32px;
@@ -14,7 +14,7 @@
   cursor: pointer;
 }
 
-.rules a::after {
+.rules p::after {
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -28,6 +28,6 @@
   content: '';
 }
 
-.rules a:hover::after {
+.rules p:hover::after {
   width: 100%;
 }

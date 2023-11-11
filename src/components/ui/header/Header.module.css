@@ -1,5 +1,7 @@
+.header {
+  margin-top: 100px;
+}
 .headerTitle {
-  padding-top: 100px;
   text-align: center;
 
   font-size: 72px;
