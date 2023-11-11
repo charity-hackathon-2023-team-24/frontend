@@ -7,7 +7,7 @@ const Countdown = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      if (timer > 0) {
+      if (timer > 1) {
         setTimer(timer - 1);
       }
       if (timer === 1) {
