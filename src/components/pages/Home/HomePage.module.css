@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  max-width: var(--max-width);
+  height: 1000px;
+  margin: auto;
+
+  font-size: 16px;
+  line-height: 1.2;
+  color: var(--white);
+}
+
+.homeContent {
+  max-width: var(--container-width);
+  margin: auto;
+  padding: 2rem 1rem;
+  text-align: center;
+}

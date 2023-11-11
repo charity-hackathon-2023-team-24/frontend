@@ -7,7 +7,7 @@ import {
 } from 'react-router-dom';
 
 import GamePage from './components/pages/GamePage';
-import HomePage from './components/pages/HomePage';
+import HomePage from './components/pages/Home/HomePage';
 import Layout from './components/pages/Layout';
 import routes from './routes';
 

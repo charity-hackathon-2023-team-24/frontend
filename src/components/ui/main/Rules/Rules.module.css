@@ -1,0 +1,33 @@
+.rules {
+  display: flex;
+  margin: auto;
+  position: relative;
+  width: 200px;
+  text-align: center;
+}
+
+.rules a {
+  font-family: var(--font-primary);
+  font-weight: 400px;
+  font-size: 32px;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.rules a::after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+
+  width: 0;
+  height: 2px;
+
+  background-color: var(--white);
+  transition: 0.3s;
+  transform: translate(-50%);
+  content: '';
+}
+
+.rules a:hover::after {
+  width: 100%;
+}

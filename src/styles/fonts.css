@@ -1,0 +1,17 @@
+@font-face {
+  font-family: Brushboy;
+  font-weight: 400;
+  src: url('./fonts/Brushboy-Regular.otf');
+}
+
+@font-face {
+  font-family: Hero;
+  font-weight: 400;
+  src: url('./fonts/Hero-Regular.ttf');
+}
+
+@font-face {
+  font-family: Hero;
+  font-weight: 700;
+  src: url('./fonts/Hero-Bold.ttf');
+}

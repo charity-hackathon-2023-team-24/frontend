@@ -1,0 +1,10 @@
+:root {
+  --bg: #1f124c;
+  --yellow: #f8c852;
+  --white: #ffffff;
+  --dark: #000000;
+  --max-width: 1920px;
+  --container-width: 1040px;
+  --font-primary: Hero;
+  --font-secondary: Brushboy;
+}

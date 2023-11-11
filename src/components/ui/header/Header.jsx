@@ -1,7 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import routes from '../../routes';
+import routes from '../../../routes';
+import styles from './Header.module.css';
 
 const Header = () => {
   const nav = useNavigate();
@@ -11,8 +12,9 @@ const Header = () => {
   };
 
   return (
-    <header>
+    <header className={styles.header}>
       <a onClick={handleClick} href={routes.rootPage}>
+        <h1 className={styles.headerTitle}>Shoot Children’s scares</h1>
         {/* <img src={logo} alt='logo' width={230} height={60} /> */}
       </a>
     </header>

@@ -1,0 +1,13 @@
+.modal {
+  margin: auto;
+  max-width: 500px;
+
+  box-shadow: 0 0.5rem 1rem var(--grey);
+  border-radius: 0.5rem;
+  border: 1px solid var(--light-orange);
+  background: var(--light-orange);
+}
+
+.modalHeader {
+  font-size: calc(1.275rem + 0.3vw);
+}

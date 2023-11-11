@@ -1,0 +1,9 @@
+.headerTitle {
+  padding-top: 100px;
+  text-align: center;
+
+  font-size: 72px;
+  font-family: var(--font-secondary);
+  line-height: 58.54px;
+  color: var(--white);
+}
