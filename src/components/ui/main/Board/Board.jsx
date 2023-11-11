@@ -3,11 +3,13 @@ import React, { useEffect, useState } from 'react';
 import styles from './Board.module.css';
 import boy from '../../../../assets/boy.svg';
 import Countdown from '../Countdown/Countdown';
+import Game from '../Game/Game';
 
 const TIMEOUT = 2000;
 
 const Board = () => {
   const [countdown, setCountdown] = useState(false);
+  const [game, setGame] = useState(false);
 
   useEffect(() => {
     const interval =
@@ -23,7 +25,7 @@ const Board = () => {
 
   return (
     <div className={styles.board}>
-      {countdown && <Countdown />}
+      {game ? <Game /> : <Countdown setGame={setGame} />}
       <img src={boy} alt='boy' />
     </div>
   );

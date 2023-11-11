@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 import styles from './Countdown.module.css';
 
-const Countdown = () => {
+const Countdown = ({ setGame }) => {
   const [timer, setTimer] = useState(3);
 
   useEffect(() => {
@@ -12,6 +12,7 @@ const Countdown = () => {
       }
       if (timer === 1) {
         clearInterval(interval);
+        setGame(true);
       }
     }, 1000);
     return () => {

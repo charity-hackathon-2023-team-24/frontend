@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React from 'react';
 
 import styles from './Modal.module.css';
 import closeButton from '../../assets/ep_close-bold.svg';

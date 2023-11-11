@@ -7,6 +7,7 @@
 }
 
 .timer {
+  margin-top: 50px;
   font-family: var(--font-secondary);
   font-size: 150px;
   line-height: 81.3%;
