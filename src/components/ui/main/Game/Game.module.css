@@ -19,6 +19,16 @@
   cursor: pointer;
 }
 
-.unvisible {
-  display: none;
+.iconMoving {
+  animation: iconMoving 5s ease-in-out 1s infinite alternate;
+  transform-origin: 50% 300%;
+}
+
+@keyframes iconMoving {
+  25% {
+    transform: rotate(-2deg);
+  }
+  75% {
+    transform: rotate(2deg);
+  }
 }
