@@ -2,6 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   clicks: 0,
+  gameOn: false,
   gameOver: false,
 };
 
@@ -14,6 +15,9 @@ const gameSlice = createSlice({
       const newClicks = state.clicks + 1;
       console.log('newClicks', newClicks);
       state.clicks = newClicks;
+    },
+    setGameOn: (state, { payload }) => {
+      state.gameOn = payload;
     },
     setGameOver: (state, { payload }) => {
       state.gameOver = payload;

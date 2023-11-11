@@ -39,7 +39,7 @@ const Game = () => {
         <div>
           {/* <img className={styles.cloud} src={cloud} alt='cloud'></img> */}
           <img
-            onClick={() => setClicked(currentIcon.icon)}
+            onClick={handleClick}
             className={`${styles.icon} ${styles.iconMoving}`}
             src={currentIcon.src}
             alt={currentIcon.name}

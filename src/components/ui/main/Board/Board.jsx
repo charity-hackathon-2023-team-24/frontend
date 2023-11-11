@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
 
 import styles from './Board.module.css';
 import boy from '../../../../assets/boy.svg';
@@ -8,8 +9,8 @@ import Game from '../Game/Game';
 const TIMEOUT = 2000;
 
 const Board = () => {
+  const { gameOn } = useSelector((state) => state.game);
   const [countdown, setCountdown] = useState(false);
-  const [game, setGame] = useState(false);
 
   useEffect(() => {
     const interval =
@@ -25,7 +26,7 @@ const Board = () => {
 
   return (
     <div className={styles.board}>
-      {game ? <Game /> : <Countdown setGame={setGame} />}
+      {gameOn ? <Game /> : <Countdown />}
       <img src={boy} alt='boy' />
     </div>
   );

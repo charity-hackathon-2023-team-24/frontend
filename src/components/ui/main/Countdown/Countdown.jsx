@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react';
+import { useDispatch } from 'react-redux';
 
 import styles from './Countdown.module.css';
+import { actions as gameActions } from '../../../../store/slices/gameSlice';
 
-const Countdown = ({ setGame }) => {
+const Countdown = () => {
   const [timer, setTimer] = useState(3);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -12,13 +15,13 @@ const Countdown = ({ setGame }) => {
       }
       if (timer === 1) {
         clearInterval(interval);
-        setGame(true);
+        dispatch(gameActions.setGameOn(true));
       }
     }, 1000);
     return () => {
       clearInterval(interval);
     };
-  }, [timer]);
+  }, [dispatch, timer]);
 
   return (
     <div className={styles.countdown}>

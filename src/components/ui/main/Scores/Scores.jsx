@@ -7,25 +7,27 @@ import { actions as gameActions } from '../../../../store/slices/gameSlice';
 const TIMEOUT = 1000;
 
 const Scores = () => {
-  const resultClicks = useSelector((state) => state.game.clicks);
+  const { gameOn, clicks } = useSelector((state) => state.game);
+  console.log('gameOn', gameOn);
+
   const [seconds, setSeconts] = useState(0);
   const dispatch = useDispatch();
 
   useEffect(() => {
     const tick = (num) => setSeconts(seconds + num);
-
-    const interval = setInterval(() => tick(1), TIMEOUT);
-
+    const interval =
+      gameOn &&
+      setInterval(() => {
+        tick(1);
+        if (seconds === 60) {
+          clearInterval(interval);
+          dispatch(gameActions.setGameOver(true));
+        }
+      }, TIMEOUT);
     return () => {
       clearInterval(interval);
     };
-  }, [seconds]);
-
-  useEffect(() => {
-    if (seconds === 60) {
-      dispatch(gameActions.setGameOver(true));
-    }
-  }, [dispatch, seconds]);
+  }, [dispatch, gameOn, seconds]);
 
   return (
     <div className={styles.score}>
@@ -35,7 +37,7 @@ const Scores = () => {
       </div>
       <div>
         <p>Очки:</p>
-        <p className={styles.scoreResult}>{resultClicks}</p>
+        <p className={styles.scoreResult}>{clicks}</p>
       </div>
     </div>
   );

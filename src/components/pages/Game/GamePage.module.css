@@ -13,3 +13,8 @@
   justify-content: stretch;
   gap: 10px;
 }
+
+.gameOverContent {
+  margin: auto;
+  font-size: 50px;
+}
