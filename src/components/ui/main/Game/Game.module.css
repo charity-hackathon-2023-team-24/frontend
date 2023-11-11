@@ -1,18 +1,8 @@
-.game {
-  position: relative;
-  display: flex;
-}
-
-/* .cloud {
-  position: absolute;
-  top: 50%;
-  width: 250px;
-  height: 180px;
-} */
-
 .icon {
+  display: block;
   position: absolute;
-  top: 50%;
+  top: 30%;
+  right: 30%;
 
   width: 150px;
   height: 150px;

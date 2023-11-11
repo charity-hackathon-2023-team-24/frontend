@@ -27,7 +27,7 @@ const Board = () => {
   return (
     <div className={styles.board}>
       {gameOn ? <Game /> : <Countdown />}
-      <img src={boy} alt='boy' />
+      <img className={styles.boardImg} src={boy} alt='boy' />
     </div>
   );
 };

@@ -1,10 +1,10 @@
 .container {
   display: flex;
   max-width: var(--max-width);
-  height: 100vh;
   margin: auto;
 
   color: var(--white);
+  background-color: var(--bg);
 }
 
 .gameContent {
@@ -14,7 +14,35 @@
   gap: 10px;
 }
 
-.gameOverContent {
+.containerOver {
+  display: flex;
+  max-width: var(--max-width);
   margin: auto;
+
+  color: var(--white);
+  background-color: var(--yellow);
+}
+
+.gameOverContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gameOverContent img {
+  width: 60%;
+  height: 100vh;
+}
+
+.result {
+  width: 40%;
+  margin-right: 200px;
+  text-align: right;
+}
+
+.result p {
+  font-family: var(--font-primary);
   font-size: 50px;
+  font-weight: 700;
+  color: var(--dark);
 }

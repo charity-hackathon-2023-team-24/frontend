@@ -1,10 +1,10 @@
 .board {
   position: relative;
   display: flex;
-  
+  text-align: center;
 }
 
-.board img {
+.boardImg {
   position: absolute;
   bottom: 0;
   left: 30%;

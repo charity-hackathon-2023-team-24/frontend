@@ -1,6 +1,8 @@
 .header {
-  margin-top: 50px;
+  padding: 50px;
+  background-color: var(--bg);
 }
+
 .headerTitle {
   text-align: center;
 
@@ -8,4 +10,9 @@
   font-family: var(--font-secondary);
   line-height: 58.54px;
   color: var(--white);
+}
+
+.headerOver {
+  padding: 50px;
+  background-color: var(--yellow);
 }

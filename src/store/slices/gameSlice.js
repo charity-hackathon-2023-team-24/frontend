@@ -1,5 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
+const SCORE_STEP = 25;
+
 const initialState = {
   clicks: 0,
   gameOn: false,
@@ -11,9 +13,7 @@ const gameSlice = createSlice({
   initialState,
   reducers: {
     increment: (state) => {
-      console.log('state', state);
-      const newClicks = state.clicks + 1;
-      console.log('newClicks', newClicks);
+      const newClicks = state.clicks + SCORE_STEP;
       state.clicks = newClicks;
     },
     setGameOn: (state, { payload }) => {
