@@ -10,7 +10,6 @@ const TIMEOUT = 1000;
 
 const Game = () => {
   const [next, setNext] = useState(0);
-  console.log('next', next);
   const [clicked, setClicked] = useState(false);
   const [score, setScore] = useState(0);
   const dispatch = useDispatch();

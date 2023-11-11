@@ -18,6 +18,7 @@ const Countdown = () => {
         dispatch(gameActions.setGameOn(true));
       }
     }, 1000);
+    
     return () => {
       clearInterval(interval);
     };

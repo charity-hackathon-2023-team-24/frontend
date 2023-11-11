@@ -8,8 +8,6 @@ const TIMEOUT = 1000;
 
 const Scores = () => {
   const { gameOn, clicks } = useSelector((state) => state.game);
-  console.log('gameOn', gameOn);
-
   const [seconds, setSeconts] = useState(0);
   const dispatch = useDispatch();
 
