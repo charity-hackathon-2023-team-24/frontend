@@ -25,28 +25,31 @@ const Header = () => {
   const handlePlayButtonClick = () => {
     navigate(routes.gamePage);
     dispatch(gameActions.setGameOn(false));
+    dispatch(gameActions.removeSelect());
   };
 
   return (
     <header className={gameOver ? styles.headerOver : styles.header}>
       {gameStarted ? (
-        <ul className={styles.gameHeader}>
-          <li onClick={handleRulesClick} className={styles.gameHeaderLink}>
-            Как играть?
-          </li>
-          <li onClick={handleTitleClick} href={routes.rootPage}>
-            <h1 className={styles.headerTitle}>Shoot Children’s scares</h1>
-          </li>
-          <li onClick={handlePlayButtonClick} className={styles.gameHeaderLink}>
-            Начать заново
-          </li>
-        </ul>
+        <>
+          <ul className={styles.gameHeader}>
+            <li onClick={handleRulesClick} className={styles.gameHeaderLink}>
+              Как играть?
+            </li>
+            <li onClick={handleTitleClick} href={routes.rootPage}>
+              <h1 className={styles.headerTitle}>Shoot Children’s scares</h1>
+            </li>
+            <li onClick={handlePlayButtonClick} className={styles.gameHeaderLink}>
+              Начать заново
+            </li>
+          </ul>
+          {modal && <Modal />}
+        </>
       ) : (
         <a onClick={handleTitleClick} href={routes.rootPage}>
           <h1 className={styles.headerTitle}>Shoot Children’s scares</h1>
         </a>
       )}
-      {modal && <Modal />}
     </header>
   );
 };

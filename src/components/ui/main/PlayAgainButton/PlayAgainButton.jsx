@@ -12,8 +12,9 @@ const PlayAgainButton = () => {
 
   const handleClick = () => {
     navigate(routes.gamePage);
-    dispatch(gameActions.setStartGame(true));
+    dispatch(gameActions.setGameOn(false));
     dispatch(gameActions.setGameOver(false));
+    dispatch(gameActions.removeSelect());
   };
 
   return (

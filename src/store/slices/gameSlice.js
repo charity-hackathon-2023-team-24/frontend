@@ -42,9 +42,13 @@ const gameSlice = createSlice({
       });
       state.fears = updated;
     },
+    removeSelect: (state) => {
+      state.fears = fears;
+    },
     removeFear: (state, { payload }) => {
       state.filtred = state.filtred.filter((el) => el.id !== payload);
     },
+
     setModal: (state, { payload }) => {
       state.modal = payload;
     },

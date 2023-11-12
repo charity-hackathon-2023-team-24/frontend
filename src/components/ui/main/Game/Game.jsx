@@ -8,6 +8,7 @@ const TIMEOUT = 1000;
 
 const Game = () => {
   const { filtred } = useSelector((state) => state.game);
+  console.log('filtred', filtred);
   const [next, setNext] = useState(0);
   const current = filtred.length > 0 && filtred.find((el, index) => index === next);
   const dispatch = useDispatch();
