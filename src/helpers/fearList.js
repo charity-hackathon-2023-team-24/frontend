@@ -8,6 +8,7 @@ import adults from '../assets/fears/adults.svg';
 import mother from '../assets/fears/mother.svg';
 import childProtection from '../assets/fears/child-protection.svg';
 import doctors from '../assets/fears/doctors.svg';
+import loneliness from '../assets/fears/loneliness.svg';
 
 export const fearList = [
   { id: 1, title: 'Предательство', alt: 'betrayal', src: betrayal, selected: false },
@@ -38,4 +39,5 @@ export const fearList = [
     selected: false,
   },
   { id: 10, title: 'Врачи', alt: 'doctors', src: doctors, selected: false },
+  { id: 11, title: 'Одиночество', alt: 'loneliness', src: loneliness, selected: false },
 ];

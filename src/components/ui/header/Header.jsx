@@ -37,7 +37,7 @@ const Header = () => {
               Как играть?
             </li>
             <li onClick={handleTitleClick} href={routes.rootPage}>
-              <h1 className={styles.headerTitle}>Shoot Children’s scares</h1>
+              <h1 className={styles.headerTitle}>Shoot your scares</h1>
             </li>
             <li onClick={handlePlayButtonClick} className={styles.gameHeaderLink}>
               Начать заново
@@ -47,7 +47,7 @@ const Header = () => {
         </>
       ) : (
         <a onClick={handleTitleClick} href={routes.rootPage}>
-          <h1 className={styles.headerTitle}>Shoot Children’s scares</h1>
+          <h1 className={styles.headerTitle}>Shoot your scares</h1>
         </a>
       )}
     </header>

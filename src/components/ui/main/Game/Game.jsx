@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import styles from './Game.module.css';
@@ -8,6 +8,7 @@ const TIMEOUT = 1000;
 
 const Game = () => {
   const dispatch = useDispatch();
+  const iconRef = useRef(null);
   const { fears, filtred } = useSelector((state) => state.game);
   const [next, setNext] = useState(0);
   const current = filtred.find((el, index) => index === next);
@@ -46,6 +47,7 @@ const Game = () => {
           className={`${styles.icon} ${styles.iconMoving}`}
           src={current.src}
           alt={current.name}
+          ref={iconRef}
         />
       )}
     </>

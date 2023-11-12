@@ -32,6 +32,13 @@ const Scores = () => {
     };
   }, [dispatch, gameOn, seconds]);
 
+  useEffect(() => {
+    if (clicks === 250) {
+      dispatch(gameActions.setGameOver(true));
+      dispatch(gameActions.setStartGame(false));
+    }
+  });
+
   return (
     <div className={styles.score}>
       <div>
