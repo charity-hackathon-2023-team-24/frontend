@@ -1,6 +1,5 @@
 .container {
   display: flex;
-  max-width: var(--max-width);
   margin: auto;
 
   color: var(--white);
@@ -16,7 +15,6 @@
 
 .containerOver {
   display: flex;
-  max-width: var(--max-width);
   height: 85vh;
   margin: auto;
 

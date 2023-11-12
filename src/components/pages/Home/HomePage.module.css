@@ -1,8 +1,7 @@
 .container {
   position: relative;
   display: flex;
-  max-width: var(--max-width);
-  height: 80vh;
+  height: 85vh;
   margin: auto;
 
   color: var(--white);
