@@ -1,7 +1,8 @@
 .container {
+  position: relative;
   display: flex;
   max-width: var(--max-width);
-  height: 1000px;
+  min-height: 80vh;
   margin: auto;
 
   color: var(--white);
@@ -13,4 +14,26 @@
   margin: auto;
   padding: 2rem 1rem;
   text-align: center;
+}
+
+.homeContent p {
+  margin-bottom: 60px;
+  font-size: 48px;
+}
+
+.girlImg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  max-width: 350px;
+  max-height: 482px;
+}
+
+.boyImg {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+
+  max-width: 403px;
+  max-height: 619px;
 }

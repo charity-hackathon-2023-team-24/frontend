@@ -1,12 +1,13 @@
 .rules {
+  position: relative;
   display: flex;
   justify-content: center;
   margin: auto;
-  position: relative;
   width: 200px;
 }
 
 .rules p {
+  margin: 5px 0;
   font-family: var(--font-primary);
   font-weight: 400px;
   font-size: 32px;
