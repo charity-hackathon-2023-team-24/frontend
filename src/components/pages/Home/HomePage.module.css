@@ -2,7 +2,7 @@
   position: relative;
   display: flex;
   max-width: var(--max-width);
-  min-height: 80vh;
+  height: 80vh;
   margin: auto;
 
   color: var(--white);
