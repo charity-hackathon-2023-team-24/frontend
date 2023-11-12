@@ -9,7 +9,7 @@ import mother from '../assets/fears/mother.svg';
 import childProtection from '../assets/fears/child-protection.svg';
 import doctors from '../assets/fears/doctors.svg';
 
-export const fears = [
+export const fearList = [
   { id: 1, title: 'Предательство', alt: 'betrayal', src: betrayal, selected: false },
   { id: 2, title: 'Насилие', alt: 'violence', src: violence, selected: false },
   { id: 3, title: 'Темнота', alt: 'night', src: night, selected: false },

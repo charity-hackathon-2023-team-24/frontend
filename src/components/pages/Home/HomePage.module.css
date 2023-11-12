@@ -1,7 +1,7 @@
 .container {
   display: flex;
   max-width: var(--max-width);
-  height: 100vh;
+  height: 1000px;
   margin: auto;
 
   color: var(--white);

@@ -7,16 +7,16 @@ import { actions as gameActions } from '../../../../store/slices/gameSlice';
 const TIMEOUT = 1000;
 
 const Game = () => {
-  const { filtred } = useSelector((state) => state.game);
-  console.log('filtred', filtred);
-  const [next, setNext] = useState(0);
-  const current = filtred.length > 0 && filtred.find((el, index) => index === next);
   const dispatch = useDispatch();
+  const { fears, filtred } = useSelector((state) => state.game);
+  const [next, setNext] = useState(0);
+  const current = filtred.find((el, index) => index === next);
+  const selectedStatus = fears.find((el) => el.id === current.id).selected;
 
-  const handleClick = () => {
+  const handleClick = (id) => {
     dispatch(gameActions.increment());
-    dispatch(gameActions.selectFear(current.id));
-    dispatch(gameActions.removeFear(current.id));
+    dispatch(gameActions.selectFear(id));
+    //dispatch(gameActions.removeFear(id));
   };
 
   useEffect(() => {
@@ -39,12 +39,16 @@ const Game = () => {
   }, [dispatch, filtred.length, next]);
 
   return (
-    <img
-      onClick={handleClick}
-      className={`${styles.icon} ${styles.iconMoving}`}
-      src={current.src}
-      alt={current.name}
-    />
+    <>
+      {!selectedStatus && (
+        <img
+          onClick={() => handleClick(current.id)}
+          className={`${styles.icon} ${styles.iconMoving}`}
+          src={current.src}
+          alt={current.name}
+        />
+      )}
+    </>
   );
 };
 

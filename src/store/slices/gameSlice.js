@@ -1,11 +1,11 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { fears } from '../../helpers/fearIcons';
+import { fearList } from '../../helpers/fearList';
 
 const SCORE_STEP = 25;
 
 const initialState = {
-  fears,
-  filtred: fears,
+  fears: fearList,
+  filtred: fearList,
   clicks: 0,
   gameStarted: false,
   gameOn: false,
@@ -37,18 +37,19 @@ const gameSlice = createSlice({
       const updated = state.fears.map((el) => {
         if (el.id === payload) {
           el.selected = true;
+          return el;
         }
         return el;
       });
       state.fears = updated;
     },
     removeSelect: (state) => {
-      state.fears = fears;
+      state.fears = fearList;
+      state.filtred = fearList;
     },
     removeFear: (state, { payload }) => {
       state.filtred = state.filtred.filter((el) => el.id !== payload);
     },
-
     setModal: (state, { payload }) => {
       state.modal = payload;
     },
