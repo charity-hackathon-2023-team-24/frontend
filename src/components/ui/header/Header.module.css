@@ -10,9 +10,31 @@
   font-family: var(--font-secondary);
   line-height: 58.54px;
   color: var(--white);
+  cursor: pointer;
 }
 
 .headerOver {
   padding: 50px;
   background-color: var(--yellow);
+}
+
+.gameHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.gameHeader > li {
+  list-style: none;
+}
+
+.gameHeaderLink {
+  font-size: 32px;
+  color: var(--yellow);
+  cursor: pointer;
+}
+
+.gameHeaderLink:hover {
+  color: var(--white);
 }

@@ -27,7 +27,8 @@ const Game = () => {
       }
       if (filtred.length === 0) {
         clearInterval(interval);
-        dispatch(gameActions.setGameOver());
+        dispatch(gameActions.setGameOver(true));
+        dispatch(gameActions.setStartGame(false));
       }
     }, TIMEOUT);
 

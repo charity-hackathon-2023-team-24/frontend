@@ -8,7 +8,7 @@
   height: 150px;
   cursor: pointer;
 
-  animation: 5s show ease;
+  animation: 3s show ease;
 }
 
 @keyframes show {

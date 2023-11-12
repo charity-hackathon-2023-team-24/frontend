@@ -5,10 +5,12 @@ const SCORE_STEP = 25;
 
 const initialState = {
   fears,
+  filtred: fears,
   clicks: 0,
+  gameStarted: false,
   gameOn: false,
   gameOver: false,
-  filtred: fears,
+  modal: false,
 };
 
 const gameSlice = createSlice({
@@ -19,11 +21,17 @@ const gameSlice = createSlice({
       const newClicks = state.clicks + SCORE_STEP;
       state.clicks = newClicks;
     },
+    setDefaultClicks: (state) => {
+      state.clicks = 0;
+    },
     setGameOn: (state, { payload }) => {
       state.gameOn = payload;
     },
     setGameOver: (state, { payload }) => {
       state.gameOver = payload;
+    },
+    setStartGame: (state, { payload }) => {
+      state.gameStarted = payload;
     },
     selectFear: (state, { payload }) => {
       const updated = state.fears.map((el) => {
@@ -36,6 +44,9 @@ const gameSlice = createSlice({
     },
     removeFear: (state, { payload }) => {
       state.filtred = state.filtred.filter((el) => el.id !== payload);
+    },
+    setModal: (state, { payload }) => {
+      state.modal = payload;
     },
   },
 });

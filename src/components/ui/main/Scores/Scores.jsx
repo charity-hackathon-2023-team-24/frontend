@@ -20,8 +20,13 @@ const Scores = () => {
         if (seconds === 60) {
           clearInterval(interval);
           dispatch(gameActions.setGameOver(true));
+          dispatch(gameActions.setStartGame(false));
         }
       }, TIMEOUT);
+
+    !gameOn && setSeconts(0);
+    !gameOn && dispatch(gameActions.setDefaultClicks());
+
     return () => {
       clearInterval(interval);
     };
