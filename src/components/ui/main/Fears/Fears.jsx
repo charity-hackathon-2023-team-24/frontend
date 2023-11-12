@@ -1,16 +1,17 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 
 import styles from './Fears.module.css';
-import { fearIcons } from '../../../../helpers/fearIcons';
 
 const Fears = () => {
+  const { fears } = useSelector((state) => state.game);
   return (
     <div>
       <ul className={styles.fearsList}>
-        {fearIcons.map((icon) => (
-          <li key={icon.id}>
-            <img src={icon.src} alt={icon.alt} />
-            <p>{icon.title}</p>
+        {fears.map((el) => (
+          <li key={el.id}>
+            <img src={el.src} alt={el.alt} />
+            <p className={el.selected ? styles.selected : null}>{el.title}</p>
           </li>
         ))}
       </ul>

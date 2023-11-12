@@ -22,8 +22,8 @@ const GamePage = () => {
         <div className={styles.gameOverContent}>
           <img src={family} alt='family' />
           <div className={styles.result}>
-            <p>Ты молодец !</p>
             <p>
+              Ты молодец! <br />
               Твой результат <br /> {clicks} очков!
             </p>
             <PlayAgainButton />

@@ -30,19 +30,19 @@
 }
 
 .gameOverContent img {
-  width: 60%;
+  max-width: 60%;
   height: 100vh;
 }
 
 .result {
-  width: 40%;
+  max-width: 40%;
   margin-right: 200px;
   text-align: right;
 }
 
 .result p {
   font-family: var(--font-primary);
-  font-size: 50px;
+  font-size: 62px;
   font-weight: 700;
   color: var(--dark);
 }

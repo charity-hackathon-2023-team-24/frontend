@@ -15,3 +15,8 @@
   font-weight: 400;
   line-height: normal;
 }
+
+.selected {
+  text-decoration: line-through;
+  transition: 0.3s;
+}
